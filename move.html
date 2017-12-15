@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvac高级功能</title>
+</head>
+<body>
+<canvas id ="myCanvas" width="1000px" height="1000px" style="border: solid"></canvas>
+
+<script language="JavaScript">
+    var  c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.strokeStyle="red";
+    ctx.strokeRect(300,300,200,100);
+
+    ctx.translate(100,0);
+
+//    ctx.translate(400,350);
+//    ctx.rotate(45*Math.PI/180);//中心旋转
+//    ctx.translate(-400,-350);
+    ctx.beginPath();
+    ctx.strokeStyle="blue";
+    ctx.strokeRect(300,300,200,100);
+</script>
+</body>
+</html>

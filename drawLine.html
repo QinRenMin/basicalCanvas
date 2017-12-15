@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画线</title>
+</head>
+<body>
+<div align="center">
+<canvas id="Mycanvas" width="400px" height="300px" style="border: #69ffea solid"></canvas>
+</div>
+</body>
+<script language="JavaScript">
+     c = document.getElementById("Mycanvas");//获得canvas标签
+     ctx = c.getContext("2d");//设置2D环境
+     ctx.lineWidth=10;
+     ctx.strokeStyle="red";
+
+     ctx.lineCap="buttun";
+     ctx.beginPath();
+     ctx.moveTo(10,40);
+     ctx.lineTo(150,40);
+     ctx.stroke();
+     ctx.closePath();
+
+     ctx.lineCap="round";
+     ctx.beginPath();
+     ctx.moveTo(10,80);
+     ctx.lineTo(150,80);
+     ctx.stroke();
+     ctx.closePath();
+
+     ctx.lineCap="square";
+     ctx.beginPath();
+     ctx.moveTo(10,120);
+     ctx.lineTo(150,120);
+     ctx.stroke();
+     ctx.closePath();
+</script>
+</html>

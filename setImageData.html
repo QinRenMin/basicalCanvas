@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>putImageData绘制图片</title>
+</head>
+<body>
+
+<canvas id="myCanvas" height="1000px" width="1000px"></canvas>
+</body>
+<script language="JavaScript">
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var  image = new Image();
+    image.src = "Image/li.jpg";
+    image.onload = function () {
+        ctx.drawImage(image,10,10);
+        var imgData = ctx.getImageData(100,100,400,400);//从画板上获得像素
+        ctx.putImageData(imgData,10,460);//将获得整个像素数据放在画板上
+        ctx.putImageData(imgData,400,460,50,50,200,200);//部分放置
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drawImage三种方法原型的区别</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000px" height="1000px" style="border: solid deepskyblue"></canvas>
+<script language="JavaScript">
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var image = new Image;
+    image.src="Image/fox.jpg";
+    //ctx.scale(2,2);
+    image.onload = function(){
+        ctx.drawImage(image,20,20);
+        ctx.drawImage(image,460,100,200,200);
+        ctx.drawImage(image,200,200,400,400,400,300,200,200);
+    }
+</script>
+</body>
+</html>
